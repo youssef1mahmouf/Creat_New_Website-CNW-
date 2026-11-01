@@ -1,0 +1,22 @@
+{
+  "name": "cnw-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "gsap": "^3.15.0",
+    "lenis": "^1.3.26",
+    "lucide": "^1.41.0",
+    "postprocessing": "^6.39.4",
+    "three": "^0.185.1",
+    "vite": "^8.2.2"
+  },
+  "dependencies": {
+    "zod": "^4.6.5"
+  }
+}

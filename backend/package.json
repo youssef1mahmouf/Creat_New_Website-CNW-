@@ -1,0 +1,42 @@
+{
+  "name": "cnw-backend",
+  "version": "1.0.0",
+  "description": "CNW - Create New Website - Backend API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build:ui": "npm --prefix ../frontend run build",
+    "start:all": "npm run build:ui && npm start",
+    "test": "node --test"
+  },
+  "keywords": [
+    "cnw",
+    "express",
+    "api"
+  ],
+  "license": "MIT",
+  "type": "commonjs",
+  "overrides": {
+    "cookie": "^0.7.2"
+  },
+  "dependencies": {
+    "argon2": "^0.45.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.3.0",
+    "hpp": "^0.2.3",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.5",
+    "nanoid": "^6.0.1",
+    "nodemailer": "^10.0.10",
+    "redis": "^5.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

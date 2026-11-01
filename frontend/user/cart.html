@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Your CNW cart." />
+  <title>Cart — CNW</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+</head>
+<body>
+  <div id="app">
+    <header id="site-header"></header>
+    <main id="page"></main>
+    <footer id="site-footer"></footer>
+  </div>
+  <div id="toast-root"></div>
+  <script type="module">
+    import { startApp } from '/src/main.js';
+    import { render } from '/src/pages/cart.js';
+    startApp(render);
+  </script>
+</body>
+</html>

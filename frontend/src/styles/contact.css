@@ -1,0 +1,101 @@
+/* ============================================================
+   Contact page (user/contact.html) — dedicated stylesheet.
+   Structure inspired by the Tohama contact page (hero band with
+   kicker, info-card grid, FAQ accordion) adapted to the CNW
+   dark design system (vars inherited from main.css).
+   ============================================================ */
+
+/* Hero band */
+.cu-hero {
+  padding: 82px 0 64px;
+  background:
+    radial-gradient(800px 300px at 15% 0%, rgba(108, 92, 231, 0.18), transparent 60%),
+    radial-gradient(700px 260px at 90% 20%, rgba(0, 206, 201, 0.12), transparent 60%),
+    var(--bg-2);
+  border-bottom: 1px solid var(--border);
+}
+.cu-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+  gap: 28px;
+  align-items: center;
+}
+.cu-kicker {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-2);
+  margin-bottom: 12px;
+}
+.cu-hero p { color: var(--muted); max-width: 640px; margin-top: 6px; }
+.cu-hero-badges { display: grid; gap: 12px; }
+.cu-badge {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+  font-size: 0.92rem;
+  color: var(--text);
+}
+
+/* Sections & grids */
+.cu-section { padding: 64px 0; }
+.cu-grid { display: grid; gap: 22px; margin-bottom: 34px; }
+.cu-grid-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cu-grid-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* Info cards */
+.cu-info { text-align: center; transition: transform 0.2s, border-color 0.2s; }
+.cu-info:hover { transform: translateY(-4px); border-color: var(--primary); }
+.cu-info .icon-wrap { margin: 0 auto 10px; }
+.cu-info h3 { margin-bottom: 6px; font-size: 1.05rem; }
+
+/* Form */
+.cu-form { max-width: none; position: relative; }
+.cu-form h3 { margin-bottom: 14px; }
+.cu-form input.invalid, .cu-form textarea.invalid {
+  border-color: var(--danger);
+  box-shadow: 0 0 0 2px rgba(225, 112, 85, 0.25);
+}
+.cu-counter { display: block; text-align: right; font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+.cu-security-note {
+  font-size: 0.78rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-top: 4px;
+}
+
+/* Honeypot — hidden from humans, visible to bots */
+.hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  top: -9999px !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+/* Aside cards & FAQ accordion */
+.cu-aside { display: grid; gap: 22px; align-content: start; }
+.cu-faq { border-top: 1px solid var(--border); padding: 12px 0; }
+.cu-faq summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--text);
+  list-style-position: inside;
+}
+.cu-faq p { margin-top: 8px; font-size: 0.92rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cu-hero-grid, .cu-grid-2 { grid-template-columns: 1fr !important; }
+  .cu-grid-3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .cu-hero { padding: 56px 0 40px; }
+  .cu-grid-3 { grid-template-columns: 1fr; }
+  .cu-section { padding: 44px 0; }
+}
